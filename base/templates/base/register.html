@@ -1,0 +1,24 @@
+{% extends "base/main.html" %}
+
+{% block content %}
+<div class="tit">
+    
+    <h1>Stay Organized, Stay Ahead"</h1>
+    </div>
+<div class="header-bar" style="justify-content:center"><h1>Register</h1>
+    <!-- <a href="{%url 'TaskList'%}"><b class="arrow">&larr;</b>GO back</a> -->
+</div>
+<div class="all">
+<div class="reg_inf" >
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Register" class="button">
+    </form>
+    <p>already have any account? <a href="{%url 'login'%}" class="button" >Login</a></p>
+    
+</div>
+    
+</div>
+{% endblock content %}
+

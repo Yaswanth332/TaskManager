@@ -1,0 +1,23 @@
+{% extends "base/main.html" %}
+{% block content %}
+<div class="tit">
+    
+    <h1>Stay Organized, Stay Ahead"</h1>
+    </div>
+<div class="header-bar" style="justify-content:center">
+    <h1>login </h1>
+    </div>
+<div class="all">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class='button' value="login">
+    
+        <div class="log">
+            <p style="font-size: small;"> If you don't have any account </p>
+    <a href="{%url 'register' %}" class="button" >Register</a>
+        </div>
+    </form>
+</div>
+{% endblock content %}
+

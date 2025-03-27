@@ -1,0 +1,23 @@
+{% extends "base/main.html" %}
+{% block content %}
+<div class="tit">
+    
+    <h1>Stay Organized, Stay Ahead"</h1>
+    </div>
+<div class="header-bar">
+    <h3>New Tasks</h3>
+<a href="{%url 'TaskList'%}"><b class="arrow">&larr;</b>Go back</a>
+
+</div>
+<div class="all">
+    
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<input type="submit" class="button" value='submit'>
+
+</form>
+
+</div>
+
+{% endblock content %}

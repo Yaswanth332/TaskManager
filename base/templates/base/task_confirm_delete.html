@@ -1,0 +1,21 @@
+{% extends "base/main.html" %}
+{% block content %}
+<div class="tit">
+    
+    <h1>Stay Organized, Stay Ahead"</h1>
+    </div>
+<div class="header-bar">
+    
+<a href="{%url 'TaskList'%}"><b class="arrow">&larr;</b>GO back</a>
+</div>
+<div class="all">
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete the task {{tasks}}</p>
+        <input type="submit" class="button" value="delete">
+    </form>
+</div>
+
+{% endblock content %}
+
+
